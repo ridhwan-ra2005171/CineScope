@@ -172,7 +172,10 @@ const SignUp = () => {
 
             <CustomButton
               title={"Continue"}
-              onPress={(() => router.replace("/(root)/(tabs)/home"))}
+              onPress={(() => {
+                setShowSuccessModal(false);//close the continue modal
+                router.push("/(root)/(tabs)/home")
+              })}
               className="mt-6"
             />
           </View>
